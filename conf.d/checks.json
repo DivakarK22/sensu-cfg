@@ -1,0 +1,28 @@
+{
+    "checks": {
+        "httpd": {
+            "command": "sudo check-process.rb -p httpd",
+            "handlers": [
+                "default",
+                "pushover"
+            ],
+            "interval": 180,
+            "occurences": 3,
+            "refresh": "1800",
+            "standalone": true,
+            "ttl": 1200
+        },
+        "mysqld": {
+            "command": "/opt/sensu/embedded/bin/check-process.rb -p mysqld",
+            "handlers": [
+                "default",
+                "pushover"
+            ],
+            "interval": 180,
+            "occurences": 3,
+            "refresh": "1800",
+            "standalone": true,
+            "ttl": 1200
+        }
+    }
+}
