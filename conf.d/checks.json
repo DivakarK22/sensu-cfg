@@ -35,8 +35,7 @@
             "refresh": "1800",
             "standalone": true,
             "ttl": 1200
-
-    }
+       }
 }
 
 }

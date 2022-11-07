@@ -1,8 +1,8 @@
 {
   "sensu": [
     {
-      "name": "Base",
-      "host": "localhost",
+      "name": "sensu-master",
+      "host": "192.168.1.63",
       "port": 4567,
       "ssl": false,
       "insecure": false,
