@@ -23,7 +23,7 @@
             "refresh": "1800",
             "standalone": true,
             "ttl": 1200
-        }
+        },
         "sensu": {
             "command": "/opt/sensu/embedded/bin/check-process.rb -p sensu-server",
             "handlers": [
