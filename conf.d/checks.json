@@ -1,7 +1,7 @@
 {
     "checks": {
         "httpd": {
-            "command": "sudo check-process.rb -p httpd",
+            "command": "/opt/sensu/embedded/bin/check-process.rb -p httpd",
             "handlers": [
                 "default",
                 "pushover"
@@ -24,5 +24,17 @@
             "standalone": true,
             "ttl": 1200
         }
+        "sensu": {
+            "command": "/opt/sensu/embedded/bin/check-process.rb -p sensu-server",
+            "handlers": [
+                "default",
+                "pushover"
+            ],
+            "interval": 30,
+            "occurences": 3,
+            "refresh": "1800",
+            "standalone": true,
+            "ttl": 1200
+
     }
 }
