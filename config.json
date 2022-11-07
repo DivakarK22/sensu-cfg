@@ -28,12 +28,19 @@
     }
   },
   "checks": {
-    "test": {
-      "command": "echo -n OK",
+    "redis": {
+      "command": "/opt/sensu/embedded/bin/check-process.rb -p redis",
       "subscribers": [
-        "test"
+        "192.168.1.63"
       ],
-      "interval": 60
+      "interval": 10
+    }
+    "rabbitmq": {
+      "command": "/opt/sensu/embedded/bin/check-process.rb -p rabbitmq-server",
+      "subscribers": [
+        "192.168.1.63"
+      ],
+      "interval": 10
     }
   },
   "client": {
