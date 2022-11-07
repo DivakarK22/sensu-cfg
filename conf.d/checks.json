@@ -35,7 +35,13 @@
             "refresh": "1800",
             "standalone": true,
             "ttl": 1200
+       },
+       "redis": {
+         "command": "/opt/sensu/embedded/bin/check-process.rb -p redis",
+         "subscribers": [
+           "192.168.1.63"
+         ],
+         "interval": 10
        }
-}
-
+  }
 }
