@@ -24,7 +24,7 @@
        "sensu-server": {
          "command": "/opt/sensu/embedded/bin/check-process.rb -p sensu-server",
          "subscribers": [
-           "k8master"
+           "192.168.1.61"
          ],
          "interval": 10
        },
