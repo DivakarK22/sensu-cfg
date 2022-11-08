@@ -40,7 +40,7 @@
     "name": "sensu-master",
     "address": "sensu",
     "subscriptions": [
-      "default"
+      "chronyd"
     ]
   }
 }
