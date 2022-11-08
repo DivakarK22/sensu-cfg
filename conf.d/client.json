@@ -1,8 +1,8 @@
 {
     "client": {
-        "address": "192.168.1.63",
+        "address": "sensu",
         "environment": "production",
-        "name": "192.168.1.63",
+        "name": "sensu-master",
         "subscriptions": [
             "linux"
         ]
