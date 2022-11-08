@@ -10,9 +10,9 @@
        "chronyd": {
          "command": "/opt/sensu/embedded/bin/check-process.rb -p chronyd",
          "subscribers": [
-           "192.168.1.63"
+           "sensu-master"
          ],
-         "interval": 10
+         "interval": 1
        },
        "rabbitmq-server": {
          "command": "/opt/sensu/embedded/bin/check-process.rb -p rabbitmq-server",
@@ -26,7 +26,7 @@
          "subscribers": [
            "192.168.1.63"
          ],
-         "interval": 10
+         "interval": 1
        },
        "kdump": {
          "command": "/opt/sensu/embedded/bin/check-process.rb -p kdump",
