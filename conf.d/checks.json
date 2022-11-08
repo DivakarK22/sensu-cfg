@@ -38,7 +38,7 @@
        "sshd": {
          "command": "/opt/sensu/embedded/bin/check-process.rb -p sshd",
          "subscribers": [
-           "sensu-master"
+           "sensu"
          ],
          "interval": 10
        },
