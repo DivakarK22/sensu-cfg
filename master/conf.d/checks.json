@@ -1,0 +1,49 @@
+{
+    "checks": {
+       "redis": {
+         "command": "/opt/sensu/embedded/bin/ruby /etc/sensu/conf.d/checks/check-process.rb -p redis",
+         "subscribers": [
+           "sensu-master"
+         ],
+         "interval": 10
+       },
+       "httpd": {
+         "command": "/opt/sensu/embedded/bin/ruby /etc/sensu/conf.d/checks/check-process.rb -p httpd",
+         "subscribers": [
+           "client:ftp"
+         ],
+         "interval": 10
+       },
+       "sensu-server": {
+         "command": "/opt/sensu/embedded/bin/ruby /etc/sensu/conf.d/checks/check-process.rb -p sensu-server",
+         "subscribers": [
+           "sensu-master"
+         ],
+         "interval": 10
+       },
+       "salt-minion": {
+         "command": "/opt/sensu/embedded/bin/ruby /etc/sensu/conf.d/checks/check-process.rb -p salt-minion",
+         "subscribers": [
+           "el7"
+         ],
+         "interval": 10
+       },
+       "sshd": {
+         "command": "/opt/sensu/embedded/bin/ruby /etc/sensu/conf.d/checks/check-process.rb -p sshd",
+         "subscribers": [
+           "sensu-master",
+           "el7"
+         ],
+         "interval": 10
+       },
+       "check-cpu": {
+         "command": "/opt/sensu/embedded/bin/ruby /etc/sensu/conf.d/checks/check-process.rb -c 170",
+         "subscribers": [
+           "sensu-master",
+           "el7"
+         ],
+         "interval": 10
+       }
+  }
+
+}
