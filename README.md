@@ -1,2 +1,0 @@
-# sensu-cfg
-# sensu-cfg
